@@ -1,2 +1,2 @@
 # cs-learning
-给cs学习一些建议
+给cs同学一些建议
