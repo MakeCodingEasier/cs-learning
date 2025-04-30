@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算机新生指南 - CS Freshman Guide</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: #2c3e50;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #3498db;
+        }
+
+        /* 主要内容区 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 卡片式布局 */
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 学习路线时间轴 */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            padding: 1.5rem;
+            margin-left: 30px;
+            border-left: 3px solid #3498db;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: #3498db;
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 24px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-links">
+        <a href="#home">首页</a>
+        <a href="#roadmap">学习路线</a>
+        <a href="#resources">资源推荐</a>
+        <a href="#tools">实用工具</a>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- 首页欢迎部分 -->
+    <header class="card" id="home">
+        <h1>欢迎来到计算机世界！🚀</h1>
+        <p>本指南将帮助你顺利开启计算机专业的学习之旅</p>
+        <img src="https://via.placeholder.com/1200x400" alt="计算机插图" style="width:100%; margin:1rem 0">
+    </header>
+
+    <!-- 专业介绍 -->
+    <section class="card">
+        <h2>📚 专业必修课导航</h2>
+        <ul>
+            <li>程序设计基础（C语言）</li>
+            <li>数据结构与算法</li>
+            <li>计算机组成原理</li>
+            <li>操作系统</li>
+            <li>计算机网络</li>
+            <li>数据库系统</li>
+        </ul>
+    </section>
+
+    <!-- 学习路线 -->
+    <section class="card" id="roadmap">
+        <h2>⏳ 四年学习路线</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>大一：编程基础</h3>
+                <p>C语言 → 数据结构 → 离散数学</p>
+            </div>
+            <div class="timeline-item">
+                <h3>大二：专业核心</h3>
+                <p>算法设计 → 计算机组成 → 操作系统</p>
+            </div>
+            <div class="timeline-item">
+                <h3>大三：方向选择</h3>
+                <p>Web开发 / 人工智能 / 网络安全 / 大数据</p>
+            </div>
+            <div class="timeline-item">
+                <h3>大四：实战提升</h3>
+                <p>毕业设计 → 实习经历 → 面试准备</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 资源推荐 -->
+    <section class="card" id="resources">
+        <h2>📖 推荐学习资源</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+            <div class="resource-card">
+                <h3>经典书籍</h3>
+                <ul>
+                    <li>《算法导论》</li>
+                    <li>《深入理解计算机系统》</li>
+                    <li>《代码大全》</li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <h3>在线课程</h3>
+                <ul>
+                    <li>MIT OpenCourseWare</li>
+                    <li>Coursera专项课程</li>
+                    <li>慕课网实战课程</li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <h3>技术社区</h3>
+                <ul>
+                    <li>GitHub</li>
+                    <li>Stack Overflow</li>
+                    <li>CSDN</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工具推荐 -->
+    <section class="card" id="tools">
+        <h2>🛠️ 开发工具推荐</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+            <div class="tool-card">
+                <h3>VS Code</h3>
+                <p>全能代码编辑器</p>
+            </div>
+            <div class="tool-card">
+                <h3>Git</h3>
+                <p>版本控制工具</p>
+            </div>
+            <div class="tool-card">
+                <h3>Postman</h3>
+                <p>API调试工具</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    // 简单交互功能
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // 黑暗模式切换（扩展功能示例）
+    const darkModeToggle = document.createElement('button');
+    darkModeToggle.textContent = '🌓 切换主题';
+    darkModeToggle.style.position = 'fixed';
+    darkModeToggle.style.bottom = '20px';
+    darkModeToggle.style.right = '20px';
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+    document.body.appendChild(darkModeToggle);
+</script>
+</body>
+</html>
